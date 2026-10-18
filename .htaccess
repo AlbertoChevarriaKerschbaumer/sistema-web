@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /acortador/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^([a-zA-Z0-9]+)$ redireccionar.php?codigo=$1 [L,QSA]
